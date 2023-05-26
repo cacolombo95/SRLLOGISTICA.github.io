@@ -1,0 +1,219 @@
+div.titulo {
+    background-color: rgba(255, 255, 255, 0.852);
+    color: black;
+
+    text-align: center;
+    padding: 2rem 0rem;
+    width: 100%;
+}
+h2 {
+    animation: camion;
+    animation-duration: 2s;
+}
+@keyframes camion {
+    from {
+        margin-left: -600%;
+        animation-delay: 1s;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+
+
+#centrado{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+main{
+    text-align: center;
+    margin-top: 150px;
+}
+.div-formulario {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 1.5rem;
+}
+
+.formulario{
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    gap: 20px;
+    border-style: solid;
+    border-radius: 30px;
+    border-width: 3px;
+    border-color: black;
+    padding: 2rem 0;
+
+    margin-bottom: 5%;
+    color:white;
+    background-color:rgba(16, 66, 139, 0.849);
+    width: 70vw;
+}
+
+.formulario__grupo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario__label{
+    display: inline-block;
+    cursor: pointer;
+}
+.menu{
+    z-index: 5;
+}
+
+.formulario__input{
+    width: 100%;
+    position: relative;
+}
+
+.inpp::placeholder{
+    color: #fff;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.inpp,.fecha{ 
+    text-align: center;
+    height: 3rem;
+    margin: 16px 0;
+    width: 85%;
+
+    border-radius: 8px;
+    font-size: 16px;
+    background-color: rgba(41, 99, 185, 0.2);
+    background-image: radial-gradient(rgb(21, 160, 219,0.6) ,70%, rgba(0, 51, 109, 1)) ;
+    border:2px solid rgb(14, 40, 80, 0.8);
+}
+
+.inpp:focus,.textarea:focus,.fecha:focus{
+    border: 3px solid rgba(1, 1, 207, 0.623);
+    outline: none;
+}
+
+
+.fecha{
+    color-scheme:dark;
+}
+
+input.file{
+    display: inline-flex;
+    min-width: 130px
+}
+
+.motivo,.grupo__botones,.cv{
+    grid-column: 1/3;
+}
+
+.textarea{
+    overflow: auto;
+    resize: vertical;
+    width: 70%;
+    border-radius: 8px;
+    font-size: 16px;
+    margin: 16px 0;
+
+    background-color: rgba(41, 99, 185, 0.2);
+    background-image: radial-gradient(rgb(21, 160, 219,0.6) ,70%, rgba(0, 51, 109, 1)) ;
+    border:2px solid rgb(14, 40, 80, 0.8);
+    
+}
+
+.boton{
+    color: #fff;
+    background-color: #159FDB;
+    border-color: #138ec4;
+    width: 200px;
+    font-size: 20px;
+    border-style: none;
+    border-radius: 15px;
+    margin: 1rem 3rem;
+    padding: 0px 30px;
+    height: 3rem;
+}
+
+.boton:hover{
+    cursor:pointer;
+}
+
+.msj-error{
+    font-size:15px ;
+    margin-bottom: 0;
+    color: rgb(255, 0, 0);
+    display: none;
+}
+.msj-error-activo{
+    display: block;
+}
+.msj-error-fecha{
+    font-size: 15px;
+    color: rgb(185, 173, 0);
+    display: none;
+}
+
+.msj-error-fecha-activo{
+    display: block;
+}
+
+.cruz{
+    position: absolute;
+    bottom: 35%;
+    right: 10%;
+    color: rgba(255, 0, 0, 0.623);
+    visibility: hidden;
+}
+
+.validacion-activo{
+    visibility: visible;
+}
+
+.msj-envio{
+    font-size: 18px;
+    color: rgb(0, 192, 0);
+    display: none;
+}
+
+.msj-envio-correcto{
+    display: block;
+    color: rgb(0, 192, 0);
+}
+.msj-envio-incorrecto{
+    display: block;
+    color: rgb(255, 2, 2)
+}
+
+
+
+
+@media screen and (max-width:800px){
+    .boton{
+        width: 150px;
+        font-size: 15px;
+    }
+    .formulario{
+        width: 90vw;
+    }
+    .grupo__botones{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+@media screen and (max-width:600px){
+    .textarea,.inpp,.fecha{
+        margin: 7px 0;
+    }
+    .formulario{
+        display: flex;
+        flex-direction: column;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso</title>
+    <link rel="stylesheet" href="../css/estilo-acceso.css">
+    <link rel="stylesheet" href="../css/estilo-general.css">
+    <link rel="shortcut icon" href="../img/Pestaña.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Barlow+Condensed&family=Oswald:wght@200;300&family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<!-- CONTENEDOR PADRE -->
+<body>
+    <!-- INICIO HEADER -->
+    <nav class="menu">
+        <section class="menu__container">
+            <img src="../img/logo.png" width="130rem" class="menu__logo"></img>
+            
+            <div class="menu__hamburguer">
+                <img src="../assets/menu.svg" class="menu__img">
+            </div>
+            
+            <ul class="menu__links">
+                <li class="menu__item">
+                    <a href="../index.html" class="menu__link">Inicio</a>
+                </li>
+                <li class="menu__item">
+                    <a href="../html/trabajacon.html" class="menu__link">Trabajá con nosotros</a>
+                </li>
+                <li class="menu__item">
+                    <a href="../html/contactenos.html" class="menu__link">Contáctanos</a>
+                </li>
+                <li class="menu__item">
+                    <a href="../html/seguimiento.html" class="menu__link">Seguí tu pedido</a>
+                </li>
+                <li class="menu__item">
+                    <a href="../html/acceso.html" class="menu__link"> <i class="uil uil-key-skeleton"></i></i></a>
+                </li>
+            </ul>
+            
+        </section>    
+    </nav>
+    <script src="../js/app.js"></script>
+
+    <main>
+        <div id="titulo">
+            <h2><p> Acceso al portal de empleado </p></h2>
+        </div>
+        
+        <form action="#" id="form__acceso"> 
+            <div class="form">
+                <div class="form__input">
+                    <input type="text"  name="name" id="usuario" placeholder="Usuario" minlength="15" maxlength="20" required>
+                    <input type="password" name="quantity" id="contraseña" placeholder="Contraseña" required size="8" minlength="8" maxlength="8">
+                </div>
+                <div class="form__botones">
+                    <button id="acceder"> <i class="uil uil-lock-open-alt"> </i> </button>
+                    <button id="reset" type="reset"> <i class="uil uil-times"></i> </button>
+                </div>
+            </div>
+            <p id="AccesoDenegado" > </p>
+        </form>
+        <script src="../js/acceso.js"></script>
+    </main>
+
+   
+
+    <!-- INICIO CONTENEDOR FOOTER -->
+    <footer>
+        <ul class="lista__footer">
+            <li class="item__telefono">0800-444-7755</li>
+            <li class="item__mail">logistica@hotmail.com.ar</li>
+            <li class="item__ubicacion">Adolfo Alsina 1653</li>
+            
+            <ul class="item__redes">
+                <li class="item"><img src="../assets/facebook.svg" alt="icono facebook" height="30rem"></li>
+                <li class="item"><img src="../assets/whatsapp.svg" alt="icono whatsapp" height="30rem"></li>
+                <li class="item"><img src="../assets/instagram.svg" alt="icono instagram" height="30rem"></li>   
+            </ul>
+            <li class="item__copy">Copyright Reserved 2023 <img src="../assets/copy.svg" width="15rem"></li>
+        </ul>
+        
+        <div class="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3283.716900547346!2d-58.392128923544426!3d-34.61131955790088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDM2JzQwLjgiUyA1OMKwMjMnMjIuNCJX!5e0!3m2!1ses!2sar!4v1682980024059!5m2!1ses!2sar" width="150%" height="90%"  style="border:0;"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+        </footer>
+</body>
+</html>
+
+
+

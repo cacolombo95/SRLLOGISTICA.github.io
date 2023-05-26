@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal empleados</title>
+    <link rel="shortcut icon" href="../img/Pestaña.png">
+    <link rel="stylesheet" href="../css/estilo-portal.css">
+    <link rel="stylesheet" href="../css/estilo-general.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Barlow+Condensed&family=Oswald:wght@200;300&family=Raleway:wght@300&display=swap" rel="stylesheet">
+</head>
+
+<!-- CONTENEDOR PADRE -->
+<body>
+    <!-- INICIO HEADER -->
+    <nav class="menu">
+        <section class="menu__container">
+            <img src="../img/logo.png" width="130rem" class="menu__logo"></img>
+            
+            <ul class="menu__links">
+                <li class="menu__item">
+                    <a href="../index.html" class="menu__link">Inicio</a>
+                </li>
+            </ul>
+            
+        </section>    
+    </nav>
+    <script src="../js/app.js"></script>
+
+    <main>
+        <section id="BuscarOmodificar">
+            
+            <h2><p>Buscador</p></h2>
+            <form action="#" id="form1" class="form">
+                <div class="input1">
+                    <input type="text" name="quantity" id="code" placeholder="Ingrese código" required size="10" minlength="10" maxlength="10">
+                </div>
+                
+                <div class="form__button">
+                    <button id="buscar" type="submit"> Buscar </button>
+                    <button class="cruz" id="reset" type="reset"> <i class="uil uil-times"></i> </button>
+                </div>
+            </form>
+            <p id="mensajeError"></p>
+            
+            <table id="mostrarDatos" >
+                <tr>
+                    <td>Apellido:</td>
+                    <td> <p id="TablaName"></p></td>
+                </tr>
+                <tr>
+                    <td>N° de Orden:</td>
+                    <td id="TablaNum"></td>
+                </tr>
+                <tr>
+                    <td>Estado:</td>
+                    <td id="TablaEstado"></td>
+                </tr>
+                <tr>
+                    <td>Mes:</td>
+                    <td id="TablaMes"></td>
+                </tr>
+            </table>
+            
+            
+            <div id="EstadoMod">
+                <h2><p>Modificar estado</p></h2>
+                <ul>
+                    <li><p>Estado:</p> </li>
+                    <li><input type="checkbox" name="check1" id="check1"><label for="check1">Orden</label></li>
+                    <li><input type="checkbox" name="check2" id="check2"><label for="check2">Preparado</label></li>
+                    <li><input type="checkbox" name="check3" id="check3"><label for="check3">En camino</label></li>
+                    <li><input type="checkbox" name="check4" id="check4"><label for="check4">Entregado</label></li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="Nuevo">
+            
+            <form action="#"  id="form2">
+                <h2><p>Ingresar nuevo cliente</p></h2>
+                <div class="col">
+                    <div class="input2">
+                        <input type="text"  name="name" id="nombre" placeholder="Apellido" required>
+                        <input type="text" name="quantity" id="codigo" placeholder="Código" required size="10" minlength="10" maxlength="10">
+                        <input type="text" id="mes" placeholder="Mes" required>
+                    </div>
+                    <div class="form__button">
+                        <button id="guardar" type="submit"> Guardar </button>
+                        <button  class="cruz" id="reset2" type="reset"> <i class="uil uil-times"></i> </button>
+                    </div>
+                </div>
+                <div id="Estado">
+                    <ul>
+                        <li><p>Estado:</p> </li>
+                        <li><input type="checkbox" name="check5" id="check5"><label for="check5">Orden</label></li>
+                        <li><input type="checkbox" name="check6" id="check6"><label for="check6">Preparado</label></li>
+                        <li><input type="checkbox" name="check7" id="check7"><label for="check7">En camino</label></li>
+                        <li><input type="checkbox" name="check8" id="check8"><label for="check8">Entregado</label></li>
+                    </ul>
+                </div>
+            </form>
+        </section>
+
+        <section id="Eliminar">
+                
+                <h2><p>Eliminar</p></h2>
+                <form action="#" class="form" id="form3">
+                    <div class="input3">
+                        <input type="text" name="quantity" id="codigo" placeholder="Ingrese mes" required size="2" minlength="2" maxlength="2">
+                    </div>
+                    
+                    <div class="form__button">
+                        <button id="boton__eliminar" class="cruz" type="reset"> <i class="uil uil-times"></i> </button>
+                    </div>
+                </form>
+        </section>
+    </main>
+    <script src="../js/portal.js"></script>
+</body>
+</html>
+
+
+

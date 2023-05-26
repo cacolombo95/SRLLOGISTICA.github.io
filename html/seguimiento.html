@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seguí tu pedido</title>
+    <link rel="stylesheet" href="../css/estilo-seguimiento.css">
+    <link rel="stylesheet" href="../css/estilo-general.css">
+    <link rel="shortcut icon" href="../img/Pestaña.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v3.0.0/css/line.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Barlow+Condensed&family=Oswald:wght@200;300&family=Raleway:wght@300&display=swap" rel="stylesheet">
+
+    
+</head>
+
+<!-- CONTENEDOR PADRE -->
+<body>
+        <!-- INICIO HEADER -->
+        <nav class="menu">
+            <section class="menu__container">
+                <img src="../img/logo.png" width="130rem" class="menu__logo"></img>
+                
+                <div class="menu__hamburguer">
+                    <img src="../assets/menu.svg" class="menu__img">
+                </div>
+                
+                <ul class="menu__links">
+                    <li class="menu__item">
+                        <a href="../index.html" class="menu__link">Inicio</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="../html/trabajacon.html" class="menu__link">Trabajá con nosotros</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="../html/contactenos.html" class="menu__link">Contáctanos</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="../html/seguimiento.html" class="menu__link">Seguí tu pedido</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="../html/acceso.html" class="menu__link"> <i class="uil uil-key-skeleton"></i></a>
+                    </li>
+                </ul>
+                
+            </section>    
+        </nav>
+        <script src="../js/app.js"></script>
+
+
+    <!-- FIN CONTENEDOR HEADER -->
+    
+    
+    <main>
+        <section class="seccion__descripcion">
+            <p><h2>Seguimientos de envíos</h2> Logística SRL te mantiene al tanto de tus pedidos a través del ingreso del código de 10 dígitos otorgado durante la contratación del servicio. </p>
+        </section>
+
+        <section class="seccion__seguimiento">
+            <!-- FORMULARIO -->
+            <form action="#" id="form__norden">
+                <div class="form">
+                    <input type="text"  name="name" id="nombre" placeholder="Nombre" required>
+                    <input type="text" name="quantity" id="codigo" placeholder="Código de seguimiento" required size="10" minlength="10" maxlength="10">
+                </div>
+                
+                <div class="form__botones">
+                    <button id="buscar" type="submit"> Buscar </button>
+                    <button id="reset" type="reset"> <i class="uil uil-times"></i> </button>
+                </div>
+            </form>
+            <div class="seccion__progreso">
+                <!-- RESPUESTA -->
+                <div class="datos">
+                    <h2 id="holanombre"></h2>
+                    <p id="ordenN"></p>
+                    <p id="error"></p>
+                    <p id="linea" style="width: 50%; margin:0 25% ;"></p>
+
+                </div>
+                <div id="barra__progreso">
+                    <ul>
+                        <li>
+                            <i class="icono uil uil-clipboard-notes"></i>
+                            <div class="progreso uno">
+                                <p>1</p>
+                                <i class="uil uil-check"></i>
+                            </div>
+                            <p class="text">Procesada</p>
+                        </li>
+                        <li>
+                            <i class="icono uil uil-box"></i>
+                            <div class="progreso dos">
+                                <p>2</p>
+                                <i class="uil uil-check"></i>
+                            </div>
+                            <p class="text">Preparada</p>
+                        </li>
+                        <li>
+                            <i class="icono uil uil-truck"></i>
+                            <div class="progreso tres">
+                                <p>3</p>
+                                <i class="uil uil-check"></i>
+                            </div>
+                            <p class="text">En camino</p>
+                        </li>
+                        <li>
+                            <i class="icono uil uil-house-user"></i>
+                            <div class="progreso cuatro">
+                                <p>4</p>
+                                <i class="uil uil-check"></i>
+                            </div>
+                            <p class="text">Entregada</p>
+                        </li>
+                        
+                    </ul>
+            
+                </div>
+                
+            </div>
+
+            <div id="whatsapp">
+                <a href=" https://api.whatsapp.com/send/?phone=5491127370594" target="_blank">
+                  <img class="wp" src="../assets/whatsappi.svg">
+                </a>
+             </div>
+
+
+            
+        
+            <script src="../js/js-seguimiento.js"></script>
+            
+        
+
+
+        </section>
+    </main>
+ 
+
+    <!-- INICIO CONTENEDOR FOOTER -->
+    <footer>
+        <ul class="lista__footer">
+            <li class="item__telefono">0800-444-7755</li>
+            <li class="item__mail">logistica@hotmail.com.ar</li>
+            <li class="item__ubicacion">Adolfo Alsina 1653</li>
+            
+            <ul class="item__redes">
+                <li class="item"><a href="https://es-la.facebook.com"><img src="../assets/facebook.svg" alt="icono facebook" height="30rem"></a></li>
+                <li class="item"><a href="https://www.instagram.com"><img src="../assets/instagram.svg" alt="icono instagram" height="30rem"></a></li>
+                <li class="item"><a href=" https://api.whatsapp.com/send/?phone=5491127370594"><img src="../assets/whatsapp.svg" alt="icono whatsapp" height="30rem"></a></li>    
+            </ul>
+            <li class="item__copy">Copyright Reserved 2023 <img src="../assets/copy.svg" width="15rem"></li>
+        </ul>
+        
+        <div class="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3283.716900547346!2d-58.392128923544426!3d-34.61131955790088!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzTCsDM2JzQwLjgiUyA1OMKwMjMnMjIuNCJX!5e0!3m2!1ses!2sar!4v1682980024059!5m2!1ses!2sar" width="150%" height="90%"  style="border:0;"  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            
+        </footer>
+</body>
+</html>
+
+
+

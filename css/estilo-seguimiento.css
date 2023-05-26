@@ -1,0 +1,286 @@
+
+
+main{
+    width: 100%;
+    height: auto;
+}
+
+@keyframes camion {
+    from {
+        margin-left: -600%;
+        animation-delay: 1s;
+    }
+    to {
+        margin-left: 0%;
+    }
+}
+.seccion__descripcion {
+    background-color: rgba(255, 255, 255, 0.852);
+    color: black;
+
+    text-align: center;
+    padding: 2rem 0rem;
+    width: 100%;
+
+}
+
+.seccion__descripcion h2 {
+    animation: camion;
+    animation-duration: 2s;
+    padding-bottom: 1.5rem;
+}
+
+.seccion__seguimiento {
+    margin-top: 1.5rem;
+    width: 100%;
+    list-style: none;
+    padding: 3rem 1rem;
+    gap: 2rem;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.form {
+    display: inline-flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+}
+#form__norden {
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    height: 10rem;
+    border: 1px solid white;
+    box-shadow: 0px 0px 1px 1px rgb(150, 149, 149,0.1);
+    background-color: rgb(203, 202, 202,0.1) ;
+
+}
+
+form input[type="text"] {
+    width: 500px;
+    height: 35px;
+
+    border: 1px solid rgb(56, 56, 56);
+    text-indent: 10px;
+    box-shadow: 0px 7px 7px -7px rgb(6, 6, 6);
+}
+.form__botones {
+    display: inline-flex;
+    justify-items: center;
+    align-items: center;
+    gap: 0;
+}
+button{
+    cursor: pointer;
+    height: 70px;
+    border-radius: 0;
+    color: white;
+    border-style: none;
+
+}
+#buscar {
+
+    width: 100px;
+    font-size: 20px;
+    background: linear-gradient(#3f9bbd,40%, rgb(14, 40, 80));   
+}
+#reset {
+    
+    cursor: pointer;
+
+    width: 30px;
+    font-size: 20px;
+    background:  linear-gradient( rgb(14, 40, 80),60%,#3f9bbd);  
+}
+
+.seccion__progreso {
+    width: 100%;
+    
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.datos  {
+    display: inline-flex;
+    flex-direction: column ;
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+p#error {
+    color: black;
+    width: 330px;
+    height: 21px;
+}
+
+
+
+
+/* BARRA PROGRESO */
+
+
+#barra__progreso{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+
+ul{
+    display: flex;
+    
+}
+ul li{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+ul li .icono{
+    font-size: 45px;
+    color: white;
+    margin: 0 72px;
+}
+ul li .text{
+    font-size: 16px;
+    color: white;
+}
+
+/* Progress Div Css  */
+
+ul li .progreso{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin: 30px 0;
+    color: #fff;
+    background-color: rgba(121, 121, 121, 0.9);
+    
+    
+    display: grid;
+    place-items: center;
+    position: relative;
+   
+}
+.progreso::after{
+    content: " ";
+    position: absolute;
+    width: 160px;
+    height: 7px;
+    background-color: rgba(121, 121, 121, 0.9);
+    right: 30px;
+}
+.uno::after{
+    width: 0;
+    height: 0;
+}
+ul li .progreso .uil{
+    display: none;
+}
+ul li .progreso p{
+    font-size: 16px;
+}
+
+
+
+ul li .active{
+    background-color: #128b1a;
+    display: grid;
+    place-items: center;
+}
+li .active::after{
+    background-color: #128b1a;
+}
+ul li .active p{
+    display: none;
+}
+ul li .active .uil{
+    font-size: 20px;
+    display: flex;
+    
+}
+
+
+@media (max-width: 980px) {
+    
+    .form input[type="text"] {
+        width: 350px;
+        height: 35px;
+    
+        border: 1px solid rgb(56, 56, 56);
+        text-indent: 10px;
+        box-shadow: 0px 7px 7px -7px rgb(6, 6, 6);
+    }
+    
+    ul{
+        flex-direction: column;
+    }
+    ul li{
+        flex-direction: row;
+    }
+    ul li .progreso{
+        margin: 25px 65px;
+        
+    }
+    .progreso::after{
+        width: 5px;
+        height: 80px;
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -1;
+    }
+    .uno::after{
+        height: 0;
+    }
+    ul li .uil{
+        margin: 8px 0;
+    }
+    .linea {
+        border-top: 1px solid white;
+        width: 350px;
+        padding: 0;
+    }  
+    @media (max-width:720px) {
+        .form input[type="text"] {
+            width: 350px;
+        }
+    }
+    @media (max-width:540px) {
+
+        body {
+            margin: 0;
+            width: 100%;
+
+            display:flex;
+            justify-content: center;
+            align-content: center;
+        }
+        .form input[type="text"] {
+            width: 300px;
+        }
+        @media (max-width:380px) {
+            
+            .form input[type="text"] {
+                width: 250px;
+            }
+        }
+
+    }
+
+
+    
+}
+

@@ -1,0 +1,240 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Abyssinica SIL', serif;
+}
+
+
+body {
+    /* border: 10px rgb(41, 175, 205) solid; */
+    display: grid;
+    color: #ffffffd6;
+    grid-template-columns: 1fr;
+    box-sizing: border-box;
+
+    width: 100%;
+    background: linear-gradient(rgb(14, 40, 80),60%, #3A98B9);
+}
+main{
+    width: 100%;
+    margin-top: 150px;
+}
+
+/* MENU */
+.menu {
+    font-size: 20px;
+    /* background-color: rgb(14, 40, 80, 0.8); */
+    width: 100%;
+    position: fixed;
+    color: white;
+    height: 15%;
+    display: block;
+}
+
+.menu__container {
+    display: flex;
+    align-content: right;
+    align-items: center;
+    justify-content: space-between;
+    
+    background-color:rgb(14, 40, 80, 0.8) ;
+    padding: 2rem 2rem 2rem 2.5rem;
+    width: 100%;
+    height: 85%;
+    margin: 0;
+    padding: 4rem 3rem 4.5rem 3rem;
+}
+
+.menu__links {
+    height: 100%;
+    display: flex;
+    
+}
+
+.menu__item {
+    list-style: none;
+    position: relative;
+    height: 100%;
+}
+
+.menu__link {
+    display: flex;
+    align-items: center;
+
+    color: white;
+    text-decoration: none;
+    height: 100%;
+    padding: 0 30px; 
+}
+.menu__link:hover {
+    color:rgb(91, 131, 206);
+}
+.menu__hamburguer {
+    display: flex;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+
+    height: 100%;
+    padding: 0 15px;
+    cursor: pointer;
+    
+}
+.menu__img {
+    display: block;
+    width: 45px;
+    
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid rgb(255, 255, 255);
+    font-size: 20px;
+    padding-top: 2rem;
+    gap: 8rem;
+
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista__footer {
+    display: inline-flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    list-style: none;
+    
+    color: white;
+    margin: 4rem 2rem;
+    text-indent: 1rem;
+    
+}
+
+.item__telefono{
+    list-style-image: url('../assets/telefono.svg');
+}
+.item__mail {
+    padding-top: 1rem;
+    list-style-image: url('../assets/mail.svg');
+}
+.item__ubicacion {
+    padding-top: 1rem;
+    list-style-image: url('../assets/ubicacion.svg');
+}
+.item__redes {
+    padding-top: 4rem;
+    list-style:none;
+    display: inline-flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.item__copy {
+    padding-top: 3rem;
+    font-size: 14px;
+    justify-content: center;
+    
+}
+
+.mapa iframe {
+    width: 400px;
+    height: 300px;
+}
+
+#whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right:20px;
+}
+img.wp {
+    font-size: 20px;
+    background-color: rgb(27, 164, 77);
+    border-radius: 50px;
+    padding: .3rem .3rem .3rem .4rem;
+    border-style: 3px solid white;
+    width: 80px;
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,.4));
+ }
+
+
+@media screen and (max-width:990px) {
+    
+    .menu__hamburguer {
+        display:flex;
+    }
+    
+    .menu__links {
+        position: fixed;
+        max-width: 300px;
+        width: 100%;
+        
+        top: 136px;
+        bottom: 0;
+        right: 0;
+        
+        background-color:rgb(14, 40, 80, 0.8);
+        overflow-y: auto;
+
+        display: grid;
+        grid-auto-rows: max-content max-content;
+
+        transform: translateX(100%);
+        transition: transform .5s;
+        
+
+    }
+    .menu__links--show {
+        transform: unset;
+        width: 100%;
+        transition: transform .5s;
+    }
+    .menu__link {
+        padding: 20px 0;
+        padding-left: 30px;
+        height: auto;
+
+    }
+    
+    footer{
+        display: inline-flex;
+        justify-items: center;
+        align-items: center;
+        flex-direction: column-reverse; 
+        width: auto;
+        margin: 2rem 0rem ;
+        padding: 2rem 0rem;
+        gap: 1rem;
+    }
+    .lista__footer {
+        justify-content: center;
+    }
+    .mapa iframe {
+        height: 230px;
+    }
+
+    @media only screen and (max-width:600px) {
+        body {
+            width: 100%;
+        }
+        .mapa iframe {
+            width: auto;
+            height: 200px;
+        }
+        img.wp {
+            width: 60px;
+        }
+
+        @media only screen and (max-width:380px) {
+            .mapa iframe {
+                height: 170px;
+            }
+        }
+    }
+    
+
+    
+}
+
